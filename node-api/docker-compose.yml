@@ -15,7 +15,8 @@ services:
     command: yarn start
 
     healthcheck:
-      test: ["CMD", "curl", "-f", "http://localhost:8080/api/word"]
+      # test: ["CMD", "curl", "-f", "http://localhost:8080/api/word"]
+      test: ["CMD", "wget", "-q", "-O", "/dev/null", "http://localhost:8080/api/word"]
       interval: 30s
       timeout: 3s
       retries: 3
