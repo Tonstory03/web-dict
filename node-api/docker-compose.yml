@@ -1,0 +1,19 @@
+version: '3.4'
+services:
+  web-api:
+    image: tonstory/web-dict
+    container_name: web-dict
+    build:
+      dockerfile: Dockerfile
+      context: .
+    networks:
+      - web-dict
+    ports:
+      - 8080:8080
+    environment: 
+      - NODE_ENV=test
+    command: yarn start
+
+networks:
+  web-dict:
+    external: true
