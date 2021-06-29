@@ -6,7 +6,6 @@
   "scripts": {
     "build": "./node_modules/.bin/tsc",
     "dev": "nodemon --watch  src/**/*.ts --ignore src/**/*.spec.ts --exec ts-node src/index.ts",
-    "prepare": "node ./scripts/hook",
     "debug": "nodemon --watch  test.ts --ignore src/**/*.spec.ts --exec ts-node ./test.ts",
     "start:dev": "NODE_ENV=dev node ./dist/index.js",
     "start:test": "NODE_ENV=test node ./dist/index.js",
